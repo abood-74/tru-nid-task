@@ -1,0 +1,11 @@
+# API Keys for Testing
+# These correspond to the hashed keys in test_data.json
+
+Admin API Key: nid_admin_test_key_123456789012345678901234
+Test API Key: nid_test_key_123456789012345678901234567
+Demo API Key: nid_demo_key_123456789012345678901234567
+
+# User Credentials
+Admin User: admin@test.com / admin123 (1000 tokens)
+Test User: tester@test.com / test123 (500 tokens)
+Demo User: demo@test.com / demo123 (100 tokens) 

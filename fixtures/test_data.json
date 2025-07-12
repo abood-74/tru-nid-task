@@ -1,0 +1,92 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "email": "admin@test.com",
+      "first_name": "Admin",
+      "last_name": "User",
+      "tokens_balance": 1000,
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "password": "pbkdf2_sha256$1000000$naau6lhVmOuwjSCyImCSkg$t3Wbtwop8jn+nUx6OsVjiDMXfLra3jLiC4181qEm52o=",
+      "last_login": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "email": "tester@test.com",
+      "first_name": "Test",
+      "last_name": "User",
+      "tokens_balance": 500,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$1000000$LdfoQjLKfeIpTpvTD1lmd0$lTznoYCxP12YvuBhbwcSAX4KY9E1J4mM7Kc2o7mLLho=",
+      "last_login": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "email": "demo@test.com",
+      "first_name": "Demo",
+      "last_name": "User",
+      "tokens_balance": 100,
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "password": "pbkdf2_sha256$1000000$QQSuz7sp6KmRABUAeMEPAf$jt09orHzbmXf3IHJYJR+zsg1kANdj/SnsJnFwKHqnzg=",
+      "last_login": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "users.apikey",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "key_hash": "5f4b89907b44d382cbbdcf272cd290a5658c15e85022132df0f2c56d4b4cc9de",
+      "name": "Admin API Key",
+      "is_active": true,
+      "expires_at": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "users.apikey",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "key_hash": "9639d16b52672a8ef56796ce2ad268327bd377edf0becb5ce8565204278d0f53",
+      "name": "Test API Key",
+      "is_active": true,
+      "expires_at": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "users.apikey",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "key_hash": "a64b6b87a7af4f55a7efec88ddca4c3b9f3b47e4bc751b438e410aa2ddd574fc",
+      "name": "Demo API Key",
+      "is_active": true,
+      "expires_at": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+] 

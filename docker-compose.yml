@@ -1,0 +1,43 @@
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_vol:/var/lib/postgresql/data
+    env_file:
+      - env_files/.env
+    restart: unless-stopped
+
+  django:
+    build:
+      context: ./compose/django
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - static-vol:/app/staticfiles
+    command: >
+      sh -c "
+        python manage.py collectstatic --noinput &&
+        python manage.py migrate &&
+        python manage.py runserver 0.0.0.0:5000
+        "
+    depends_on:
+      - db
+    env_file:
+      - env_files/.env
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./compose/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - static-vol:/app/staticfiles 
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    depends_on:
+      - django
+
+volumes:
+  postgres_data_vol: {}
+  static-vol: {}
